@@ -29,6 +29,10 @@ async def 초기화(ctx, id, pw):
             await ctx.send('비밀번호가 잘못되었습니다.')
     else:
         await ctx.send('ID가 잘못되었습니다.')
+
+@bot.command()
+async def 도움(ctx): 
+    await ctx.send('명령어 설명\n\n>배워 [대상] [설명]\n대상에 대해 배웁니다.\n\n>말해 [대상]\n배운 대상에 대해 말합니다.\n\n>핑\n봇의 핑을 확입합니다.\n\n>재생 [Youtube URL]\n유튜브 노래를 재생합니다.\n\n>일시정지\n노래를 일시정지 합니다.\n\n>다시시작\n노래를 다시 시작합니다.\n\n>멈춰\n노래를 멈춥니다.\n\n>나가\n봇이 음성채널에서 나갑니다.')     
 @bot.command()
 async def 배워(ctx, mal, mal1):
     text_mod = re.sub('[^정지민]','',mal)
